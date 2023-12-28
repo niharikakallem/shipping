@@ -1,8 +1,12 @@
 import React from "react";
 
+import { useNavigate } from "react-router-dom";
+
 import { Button, Img, Line, Text } from "components";
 
 const Header = (props) => {
+  const navigate = useNavigate();
+
   return (
     <>
       <header className={props.className}>
@@ -44,8 +48,9 @@ const Header = (props) => {
                     alt="icon"
                   />
                   <Text
-                    className="leading-[135.02%] text-sm text-white-A700"
+                    className="common-pointer leading-[135.02%] text-sm text-white-A700"
                     size="txtKrubMedium14"
+                    onClick={() => navigate("/homepage")}
                   >
                     <>
                       Mon - Sat 9.00 - 18.00
